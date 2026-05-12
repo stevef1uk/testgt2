@@ -1,5 +1,5 @@
-# Gas Town rig .gitignore (clean baseline after testgt2 reset, May 2026)
-# Tracks: user project files only.
+# Gas Town rig .gitignore (clean baseline, May 2026)
+# Tracks: user project files (SPEC.md, README.md, source code, ...).
 # Ignores: every gt-agent/beads/dolt/runtime artifact + role worktree dirs.
 
 # =============================================================================
@@ -21,16 +21,18 @@ config.json
 
 # =============================================================================
 # Agent-internal plumbing (Fix #95)
+#
 # These files are written by gt-agent / gt prime / script(1) and must
-# never end up in user commits.
+# never end up in user commits. SPEC.md and README.md are deliberately
+# NOT in this list — those are user-authored content (the project
+# contract / docs) and the polecat needs to READ them from its
+# worktree at runtime.
 # =============================================================================
 .gt-agent
 typescript
 AGENTS.md
-SPEC.md
 CLAUDE.md
 CLAUDE.local.md
-README.md
 project_label
 progress_report
 gt-agent-state.json
