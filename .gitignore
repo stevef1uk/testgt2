@@ -1,14 +1,73 @@
+# Gas Town rig .gitignore (clean baseline after testgt2 reset, May 2026)
+# Tracks: user project files only.
+# Ignores: every gt-agent/beads/dolt/runtime artifact + role worktree dirs.
 
-# Beads / Dolt files (added by bd init)
-.dolt/
-*.db
-.beads-credential-key
-
-# Gas Town (added by gt)
+# =============================================================================
+# Gas Town runtime state (transient, never commit)
+# =============================================================================
 .runtime/
 .claude/
 .logs/
+.archive/
+.dolt-data/
+.dolt/
+.doltcfg/
 __pycache__/
 state.json
+config.json
+*.lock
+*.flock
+*.pid
+
+# =============================================================================
+# Agent-internal plumbing (Fix #95)
+# These files are written by gt-agent / gt prime / script(1) and must
+# never end up in user commits.
+# =============================================================================
+.gt-agent
+typescript
+AGENTS.md
+SPEC.md
 CLAUDE.md
 CLAUDE.local.md
+README.md
+project_label
+progress_report
+gt-agent-state.json
+
+# =============================================================================
+# Role worktree directories (gt manages these — recreated on demand)
+# =============================================================================
+mayor/
+witness/
+refinery/
+architect/
+qa/
+deacon/
+planner/
+mechanic/
+crew/
+polecats/
+plugins/
+settings/
+.land-worktree/
+
+# =============================================================================
+# Bare-repo / git internals
+# =============================================================================
+.repo.git/
+
+# =============================================================================
+# Beads internal data (managed by bd)
+# =============================================================================
+.beads/
+
+# =============================================================================
+# OS / editor noise
+# =============================================================================
+.DS_Store
+*~
+*.swp
+*.swo
+.vscode/
+.idea/
