@@ -1,16 +1,13 @@
-.gtignore
+runtime/*/*
+!.runtime
 
-# Gas Town (added by gt)
-.runtime/
-.claude/
-.logs/
-__pycache__/
-state.json
-CLAUDE.md
-CLAUDE.local.md
-.gt-agent
-typescript
-AGENTS.md
-project_label
-progress_report
-gt-agent-state.json
+# Node
+node_modules/
+npm-debug.log*
+
+# Ruby
+.log
+*.log
+log/
+**/tmp
+.DS_Store
