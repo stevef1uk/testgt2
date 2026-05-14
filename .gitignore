@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 # Gas Town rig .gitignore (clean baseline, May 2026)
 # Tracks: user project files (SPEC.md, README.md, source code, ...).
 # Ignores: every gt-agent/beads/dolt/runtime artifact + role worktree dirs.
@@ -73,3 +74,21 @@ settings/
 *.swo
 .vscode/
 .idea/
+=======
+.gtignore
+
+# Gas Town (added by gt)
+.runtime/
+.claude/
+.logs/
+__pycache__/
+state.json
+CLAUDE.md
+CLAUDE.local.md
+.gt-agent
+typescript
+AGENTS.md
+project_label
+progress_report
+gt-agent-state.json
+>>>>>>> Stashed changes
