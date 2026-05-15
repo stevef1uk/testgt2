@@ -8,8 +8,8 @@ class TestFizzBuzz(unittest.TestCase):
         self.assertEqual(fizzbuzz(5), "Buzz")
     def test_fizzbuzz(self):
         self.assertEqual(fizzbuzz(15), "FizzBuzz")
-    def test_default(self):
-        self.assertEqual(fizzbuzz(1), "1")
+    def test_number(self):
+        self.assertEqual(fizzbuzz(7), "7")
 
 if __name__ == "__main__":
     unittest.main()

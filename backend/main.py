@@ -1,5 +1,17 @@
+#!/usr/bin/env python3
 from fizzbuzz import fizzbuzz
-if __name__ == "__main__":
+
+def main():
     import sys
-    for arg in sys.argv[1:]:
-        print(fizzbuzz(int(arg)))
+    if len(sys.argv) != 2:
+        print("Usage: main.py <number>")
+        return
+    try:
+        n = int(sys.argv[1])
+    except ValueError:
+        print("Invalid integer")
+        return
+    print(fizzbuzz(n))
+
+if __name__ == "__main__":
+    main()
