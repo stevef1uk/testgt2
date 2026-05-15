@@ -1,0 +1,2 @@
+This is automated tests text.
+Merges will be rolling.
