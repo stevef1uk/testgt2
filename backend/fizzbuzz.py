@@ -1,8 +1,9 @@
 def fizzbuzz(n: int) -> str:
-    if n % 15 == 0:
+    if n % 3 == 0 and n % 5 == 0:
         return "FizzBuzz"
-    if n % 3 == 0:
+    elif n % 3 == 0:
         return "Fizz"
-    if n % 5 == 0:
+    elif n % 5 == 0:
         return "Buzz"
-    return str(n)
+    else:
+        return str(n)
