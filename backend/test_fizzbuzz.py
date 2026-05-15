@@ -1,5 +1,5 @@
 import unittest
-from .fizzbuzz import fizzbuzz
+from fizzbuzz import fizzbuzz
 
 class TestFizzBuzz(unittest.TestCase):
     def test_multiples_of_15(self):
@@ -21,3 +21,6 @@ class TestFizzBuzz(unittest.TestCase):
         self.assertEqual(fizzbuzz(1), "1")
         self.assertEqual(fizzbuzz(2), "2")
         self.assertEqual(fizzbuzz(4), "4")
+
+if __name__ == "__main__":
+    unittest.main()
