@@ -1,21 +1,14 @@
 # Architecture for testgt2 FizzBuzz rig
 
 ## Overview
-The FizzBuzz rig is designed to implement the classic FizzBuzz problem, where numbers from 1 to 100 are printed, replacing multiples of 3 with "Fizz", multiples of 5 with "Buzz", and multiples of both with "FizzBuzz". This rig will consist of a backend implementation in Python, with a main module, a FizzBuzz module, and a test module.
+This architecture outlines a minimal FizzBuzz implementation in Python using only the standard library, fully aligned with the provided SPEC. The goal is to create a clean, testable, and maintainable codebase within strict constraints: no third-party dependencies, total code under 40 lines, and compliance with conventional commits. The system is divided into three core components, each mapped directly to acceptance criteria.
 
 ## Planned file layout
-- `backend/fizzbuzz.py` — This module will contain the FizzBuzz logic, including functions to generate the FizzBuzz sequence.
-- `backend/main.py` — This module will serve as the entry point for the rig, calling the FizzBuzz function to print the sequence.
-- `backend/test_fizzbuzz.py` — This module will contain unit tests for the FizzBuzz function, ensuring it produces the correct output.
+- `backend/fizzbuzz.py` — Contains a pure function `fizzbuzz(n)` that returns the appropriate string based on canonical FizzBuzz rules: "Fizz" for multiples of 3, "Buzz" for multiples of 5, "FizzBuzz" for multiples of both, and the string representation of the number otherwise.
+- `backend/main.py` — A short script that calls and prints the results of `fizzbuzz(i)` for i from 1 to 15, inclusive, with each result on a new line, ending with "FizzBuzz" for input 15.
+- `backend/test_fizzbuzz.py` — A unittest-based test suite that validates key cases: 1 (returns "1"), 3 (returns "Fizz"), 5 (returns "Buzz"), and 15 (returns "FizzBuzz"). The test must pass when executed via `python3 -m unittest backend.test_fizzbuzz`.
 
 ## Notes for polecat
-The implementation order will be:
-1. `backend/fizzbuzz.py`
-2. `backend/test_fizzbuzz.py`
-3. `backend/main.py`
-Testing will be done using the `pytest` command, with the test suite covering various scenarios, including multiples of 3, 5, and both.
-
-## Acceptance Criteria
-The rig will be considered complete when the following conditions are met:
-- The FizzBuzz sequence is correctly printed for numbers from 1 to 100.
-- Unit tests pass for all scenarios.
+1. Implementation order: First `fizzbuzz.py`, then `test_fizzbuzz.py`, and finally `main.py`.
+2. After writing files, run `python3 -m unittest backend.test_fizzbuzz` from the repository root to verify correctness.
+3. Commit all files using `feat: add FizzBuzz functionality` or similar conventional commit messages.
