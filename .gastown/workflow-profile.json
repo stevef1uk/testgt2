@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-05-16T04:52:10Z",
+  "generated_at": "2026-05-16T16:26:38Z",
   "source": "llm",
   "confidence": "high",
   "validation": {
@@ -14,8 +14,10 @@
       "backend/main.py",
       "backend/test_fizzbuzz.py"
     ],
-    "spec_summary": "Build a minimal FizzBuzz library in Python using only the stdlib. The project consists of three files in the 'backend/' directory: 'fizzbuzz.py' (exports the fizzbuzz function with canonical rules), 'main.py' (runs and prints fizzbuzz(1) to fizzbuzz(15), one per line, ending in 'FizzBuzz'), and 'test_fizzbuzz.py' (unittest test suite verifying key cases: 1, 3, 5, 15). No third-party dependencies are allowed; no requirements.txt should be created. Tests must pass when run via 'python3 -m unittest backend.test_fizzbuzz'. The total codebase should be ≤40 lines. All files must be committed with a conventional commit message starting with 'feat: '. The qa_verify_command runs from the repo root and executes the unittest module.",
-    "min_architecture_bytes": 150,
-    "min_plan_bytes": 200
+    "spec_summary": "The testgt2 rig is a minimal end‑to‑end project used to verify the Gas Town agent pipeline. The operator’s default request is to implement a classic FizzBuzz library in pure Python stdlib, with no third‑party dependencies. All source files live under a top‑level directory named \"backend\". The library must expose a function fizzbuzz(n: int) -\u003e str that follows the canonical rules: return \"FizzBuzz\" for numbers divisible by 15, \"Fizz\" for those divisible by 3 only, \"Buzz\" for those divisible by 5 only, and the number itself as a string otherwise. A tiny CLI script backend/main.py should iterate i from 1 to 15, printing each fizzbuzz(i) result on its own line; the final line must be \"FizzBuzz\". Unit tests are required in backend/test_fizzbuzz.py using the stdlib unittest framework, covering at least the four cases (1 → \"1\", 3 → \"Fizz\", 5 → \"Buzz\", 15 → \"FizzBuzz\"). The tests must be executable via \"python3 -m unittest backend.test_fizzbuzz\" and all must pass. No requirements.txt or external packages are allowed, and total source lines should not exceed 40 across the three files. The implementation must be committed in a single conventional commit prefixed with \"feat:\". The QA step validates the implementation by running the unittest command, ensuring the repository contains exactly the three backend files and nothing else beyond the rig scaffolding.",
+    "min_architecture_bytes": 2000,
+    "min_plan_bytes": 1000,
+    "min_implementation_file_bytes": 400,
+    "min_substantive_lines": 3
   }
 }
