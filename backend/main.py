@@ -1,5 +1,10 @@
+"""Entry point for the FizzBuzz implementation."""
 from backend.fizzbuzz import fizzbuzz
 
-if __name__ == "__main__":
-    for i in range(1, 16):
+def main(start: int = 1, end: int = 100) -> None:
+    """Print FizzBuzz results from start to end inclusive."""
+    for i in range(start, end + 1):
         print(fizzbuzz(i))
+
+if __name__ == "__main__":
+    main()
