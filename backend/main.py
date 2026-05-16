@@ -18,3 +18,5 @@ def main(args=None):
 
 if __name__ == "__main__":
     sys.exit(main())
+
+# Added runner entry point for bead te-4kj
