@@ -1,7 +1,5 @@
-from fizzbuzz import fizzbuzz
-
-def main():
-    print(fizzbuzz(100))
+from backend.fizzbuzz import fizzbuzz
 
 if __name__ == "__main__":
-    main()
+    for i in range(1, 16):
+        print(fizzbuzz(i))
