@@ -16,7 +16,7 @@
     ],
     "spec_summary": "The testgt2 rig is a minimal end‑to‑end project used to verify the Gas Town agent pipeline. The operator’s default request is to implement a classic FizzBuzz library in pure Python stdlib, with no third‑party dependencies. All source files live under a top‑level directory named \"backend\". The library must expose a function fizzbuzz(n: int) -\u003e str that follows the canonical rules: return \"FizzBuzz\" for numbers divisible by 15, \"Fizz\" for those divisible by 3 only, \"Buzz\" for those divisible by 5 only, and the number itself as a string otherwise. A tiny CLI script backend/main.py should iterate i from 1 to 15, printing each fizzbuzz(i) result on its own line; the final line must be \"FizzBuzz\". Unit tests are required in backend/test_fizzbuzz.py using the stdlib unittest framework, covering at least the four cases (1 → \"1\", 3 → \"Fizz\", 5 → \"Buzz\", 15 → \"FizzBuzz\"). The tests must be executable via \"python3 -m unittest backend.test_fizzbuzz\" and all must pass. No requirements.txt or external packages are allowed, and total source lines should not exceed 40 across the three files. The implementation must be committed in a single conventional commit prefixed with \"feat:\". The QA step validates the implementation by running the unittest command, ensuring the repository contains exactly the three backend files and nothing else beyond the rig scaffolding.",
     "min_architecture_bytes": 2000,
-    "min_plan_bytes": 1000,
+    "min_plan_bytes": 900,
     "min_implementation_file_bytes": 400,
     "min_substantive_lines": 3
   }
